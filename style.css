@@ -1,14 +1,22 @@
 /* Import Google Font */
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+:root{
+  --bg: #F0F0C9;
+  --text: #37393a;
+  --main1: #08B2E3;
+  --main2: #D264B6;
+  --main3: #F2BB05;
+
+}
 /* Set Fonts and Resets */
 body,
 html {
-  background: gray;
+  background: var(--bg);
   margin: 0;
   overflow-x: hidden;
   padding: 0;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Ubuntu Mono", monospace;
 }
 
 /* With Flexbox, Horizontally and vertically cneter */
@@ -25,16 +33,17 @@ body {
 
 /* Actual Keyboard Keys */
 kbd {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   display: block;
   font-size: 4rem;
+  color: var(--text);
 }
 
 /* Name of Sound */
 .sound {
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
-  color: #e2e2e2;
+  color: var(--text);
 }
 
 /* Use CSS Grid to display keys */
@@ -58,7 +67,7 @@ kbd {
   /* Styling of keys */
   width: 10rem;
   text-align: center;
-  outline: 1px solid black;
+  outline: 3px solid var(--main1);
   
   /* Change mouse pointer */
   cursor:pointer;
@@ -76,6 +85,6 @@ kbd {
 .playing {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
-  background: white;
+  box-shadow: 10px 10px 0 var(--main3);
+  background: var(--main2);
 }
