@@ -23,6 +23,7 @@ html {
 body {
   display: -webkit-box;
   display: flex;
+  flex-direction: column;
   -webkit-box-pack: center;
           justify-content: center;
   -webkit-box-align: center;
@@ -85,11 +86,31 @@ kbd {
 
 
 /* Transition Animation. Last frame of animation. */
-.playing {
+.playing{
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   box-shadow: 10px 10px 0 var(--main3);
   background: var(--main2);
+}
+
+/* Links */
+section{
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a:link, a:visited{
+  padding: 1rem;
+  margin: .5rem;
+  outline: 3px solid var(--main1);
+  color: var(--text);
+  text-decoration: none;
+}
+a:active, a:hover, a:focus {
+  box-shadow: 10px 10px 0 var(--main3);
+  background: var(--main2);
+  font-weight: bold;
 }
 
 @media screen and (max-width: 700px){
