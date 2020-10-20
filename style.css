@@ -57,14 +57,18 @@ kbd {
 
 /* Visual Keys / Squares */
 .key {
-  grid-column: 2/3;
   /* Typography */
   margin: 1rem;
   font-size: 1.5rem;
   padding: 1rem 0.5rem;
 
   /* Styling of keys */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 10rem;
+  height: 10rem;
   text-align: center;
   outline: 3px solid var(--main1);
   
@@ -86,4 +90,15 @@ kbd {
           transform: scale(1.1);
   box-shadow: 10px 10px 0 var(--main3);
   background: var(--main2);
+}
+
+@media screen and (max-width: 500px){
+  .key{
+    width: 20rem;
+    height: 20rem;
+    font-size: 3rem;
+  }
+  kbd{
+    font-size: 8rem;
+  }
 }
