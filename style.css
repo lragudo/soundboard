@@ -28,6 +28,7 @@ body {
   -webkit-box-align: center;
           align-items: center;
   min-height: 100vh;
+  min-width: 100vw;
 }
 
 
@@ -48,17 +49,15 @@ kbd {
 
 /* Use CSS Grid to display keys */
 .keys {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 /* Visual Keys / Squares */
 .key {
+  grid-column: 2/3;
   /* Typography */
   margin: 1rem;
   font-size: 1.5rem;
